@@ -1,4 +1,4 @@
-.PHONY: init apply destroy
+.PHONY: init apply destroy plan
 
 init:
 	cd terraform && terraform init
@@ -14,3 +14,6 @@ apply:fmt validate
 
 destroy:fmt validate
 	cd terraform && terraform apply
+
+plan:fmt validate
+	cd terraform && terraform plan
